@@ -9,31 +9,12 @@ setTimeout(() => {
 
 const Main = () => {
     return <main>
-        <button className="btn btn-primary">
-            <i data-feather="save"></i>
-            Guardar
-        </button>
-        <p>main</p>
-
         <Carousel>
             <Carousel.Item>
+                <img className='w-100 dark-image' src='https://s1.eestatic.com/2020/05/18/como/gatos-mascotas-trucos_490961518_152142875_1706x960.jpg'></img>
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
+                    <h3>Gato</h3>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
