@@ -1,5 +1,8 @@
 const Footer = () => {
-    return <footer data-bs-theme="dark" className="bd-footer py-4 py-md-5 bg-body-tertiary">
+    return 5>Guides</h5>
+                    <ul className="list-unstyled">
+                        <li className="mb-2"><a href="/docs/5.3/getting-started/">Getting started</a></li>
+                      <footer data-bs-theme="dark" className="bd-footer py-4 py-md-5 bg-body-tertiary">
         <div className="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
             <div className="row">
                 <div className="col-lg-3 mb-3">
@@ -26,10 +29,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="col-6 col-lg-2 mb-3">
-                    <h5>Guides</h5>
-                    <ul className="list-unstyled">
-                        <li className="mb-2"><a href="/docs/5.3/getting-started/">Getting started</a></li>
-                        <li className="mb-2"><a href="/docs/5.3/examples/starter-template/">Starter template</a></li>
+                    <h  <li className="mb-2"><a href="/docs/5.3/examples/starter-template/">Starter template</a></li>
                         <li className="mb-2"><a href="/docs/5.3/getting-started/webpack/">Webpack</a></li>
                         <li className="mb-2"><a href="/docs/5.3/getting-started/parcel/">Parcel</a></li>
                         <li className="mb-2"><a href="/docs/5.3/getting-started/vite/">Vite</a></li>
