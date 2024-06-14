@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Single from './single';
 import Basic from './layout/basic';
+import Adoptar from './pages/adoptar/adoptar';
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,16 @@ const router = createBrowserRouter([
                 path: "detalle/:slug",
                 element: <Single />,
             },
+        ],
+    },
+    {
+        path: "/adoptar",
+        element: <Basic />,
+        children: [
+            {
+                path: '',
+                element: <Adoptar />
+            }
         ],
     },
 ]);
