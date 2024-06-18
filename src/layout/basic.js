@@ -8,7 +8,7 @@ const Basic = () => {
         <>
             <StrictMode>
                 <Header />
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row py-5">
                         <Outlet></Outlet>
                     </div>

@@ -10,6 +10,7 @@ import {
 import Single from './single';
 import Basic from './layout/basic';
 import Adoptar from './pages/adoptar/adoptar';
+import Catalogo from './pages/catalogo/catalogo';
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,16 @@ const router = createBrowserRouter([
             {
                 path: '',
                 element: <Adoptar />
+            }
+        ],
+    },
+    {
+        path: "/catalogo",
+        element: <Basic />,
+        children: [
+            {
+                path: '',
+                element: <Catalogo />
             }
         ],
     },
