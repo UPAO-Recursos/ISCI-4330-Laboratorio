@@ -6,6 +6,7 @@ import './catalogo.css';
 const Catalogo = () => {
     const [filteredData, setFilteredData] = useState(Data);
     const [filtroCategoria, setFiltroCategoria] = useState('');
+    const [filtroTamano, setFiltroTamano] = useState('');
     const [toggleFilter, setTogglefilter] = useState(false);
 
     const handleClick = (e) => {
@@ -15,12 +16,44 @@ const Catalogo = () => {
 
     const filterData = (e) => {
         setTogglefilter(!toggleFilter);
-        if (!filtroCategoria) {
-            setFilteredData(Data);
+
+        console.log(!!filtroCategoria && !!filtroTamano, filtroCategoria, filtroTamano)
+
+        if (!filtroCategoria && !filtroTamano) {
+            return setFilteredData(Data);
+        }
+
+
+        if (!!filtroCategoria && !!filtroTamano) {
+            const filteredData = Data.filter(it => {
+                if (it.category === filtroCategoria && it.tamano === filtroTamano)
+                    return true;
+                return false
+            })
+            setFilteredData(filteredData);
+            console.log('ambos')
             return;
         }
-        const filteredData = Data.filter(it => it.category === filtroCategoria)
-        setFilteredData(filteredData);
+
+        if (!filtroTamano) {
+            const filteredData = Data.filter(it => {
+                if (it.category === filtroCategoria)
+                    return true;
+                return false
+            })
+            console.log('categoria')
+            setFilteredData(filteredData);
+            return;
+        } else {
+            const filteredData = Data.filter(it => {
+                if (it.tamano === filtroTamano)
+                    return true;
+                return false
+            })
+            console.log('tamano')
+            setFilteredData(filteredData);
+            return;
+        }
     }
 
     return <>
@@ -43,6 +76,17 @@ const Catalogo = () => {
                                     { label: 'Rubio', value: 'rubio' },
                                     { label: 'Siames', value: 'siames' },
                                     { label: 'Negro', value: 'negro' },
+                                ].map((it, idx) => <option key={idx} value={it.value}>{it.label}</option>)
+                            }
+                        </select>
+
+                        <h6 className='mt-2'>Tamaños</h6>
+                        <select defaultValue='' class="form-select" onChange={(e) => setFiltroTamano(e.target.value)}>
+                            {
+                                [
+                                    { label: 'Gato Grande', value: 'grande' },
+                                    { label: 'Gato Pequeño', value: 'pequeño' },
+                                    { label: 'Mediano', value: 'mediano' },
                                 ].map((it, idx) => <option key={idx} value={it.value}>{it.label}</option>)
                             }
                         </select>
