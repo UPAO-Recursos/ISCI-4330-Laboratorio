@@ -40,6 +40,12 @@ const Header = () => {
                                 </div>
                             </Dropdown.Item>
                         })}
+
+                        <Dropdown.Item>
+                            <div class="card mb-3">
+                                <Link className="btn btn-primary" to="/carrito">Ir a Carrito</Link>
+                            </div>
+                        </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>

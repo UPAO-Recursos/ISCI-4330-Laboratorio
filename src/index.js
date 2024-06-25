@@ -11,6 +11,7 @@ import Single from './single';
 import Basic from './layout/basic';
 import Adoptar from './pages/adoptar/adoptar';
 import Catalogo from './pages/catalogo/catalogo';
+import Carrito from './pages/carrito/carrito';
 
 const router = createBrowserRouter([
     {
@@ -41,6 +42,16 @@ const router = createBrowserRouter([
             {
                 path: '',
                 element: <Adoptar />
+            }
+        ],
+    },
+    {
+        path: "/carrito",
+        element: <Basic />,
+        children: [
+            {
+                path: '',
+                element: <Carrito />
             }
         ],
     },
